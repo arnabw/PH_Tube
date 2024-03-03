@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="icon" href="./play.png" type="png/icon" />
+    <script
+      src="https://kit.fontawesome.com/7959247147.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="px-4 md:px-8 lg:px-12 py-4 text-balance font-mono">
+    <header>
+      <a
+        href="./index.html"
+        class="bg-[#25252533] px-5 py-[10px] rounded-lg text-[#252525] text-lg font-medium"
+        ><i class="fa-solid fa-caret-left"></i>Back</a
+      >
+    </header>
+    <main class="py-6 space-y-2">
+      <article class="space-y-4">
+        <h1 class="font-black text-2xl underline">
+          Discuss the scope of var, let, and const
+        </h1>
+        <ul class="italic text-base list-disc">
+          <li class="font-black text-xl">var - Function Scoped (or Global):</li>
+          <li>
+            If declared within a function, the variable is accessible only
+            inside that function.
+          </li>
+          <li>If declared outside any function, it's globally accessible.</li>
+          <li>
+            var can be redeclared and reassigned, potentially leading to
+            confusion.
+          </li>
+        </ul>
+        <ul class="italic text-base list-disc">
+          <li class="font-black text-xl">let - Block Scoped:</li>
+          <li>
+            Declared within any block of code delimited by curly braces ({}).
+          </li>
+          <li>Accessible only within its immediate block or nested blocks.</li>
+          <li>Can be reassigned but not redeclared within the same block.</li>
+        </ul>
+        <ul class="italic text-base list-disc">
+          <li class="font-black text-xl">const - Block Scoped (Immutable):</li>
+          <li>Similar to let in terms of block scoping.</li>
+          <li>Must be assigned a value during declaration.</li>
+          <li>
+            The value cannot be reassigned later. Objects declared with const
+            can have their properties modified, but you can't reassign the
+            entire object.
+          </li>
+        </ul>
+        <ul class="italic text-base list-disc">
+          <li class="font-black text-xl">Best Practices:</li>
+          <li>
+            Prefer let and const for most cases to avoid issues with var's
+            overly broad scope and accidental redeclarations.
+          </li>
+          <li>Use const for values you know should never change.</li>
+        </ul>
+      </article>
+      <article class="space-y-4">
+        <h1 class="font-black text-2xl underline">
+          Use Cases of null and undefined
+        </h1>
+        <ul class="italic text-base list-disc">
+          <li class="font-black text-xl">undefined:</li>
+          <li>
+            Automatically assigned to declared variables that don't yet have a
+            value.
+          </li>
+          <li>
+            Also assigned to missing object properties or function return values
+            without explicit return statements.
+          </li>
+          <li>Generally indicates the absence of a defined value.</li>
+        </ul>
+        <ul class="italic text-base list-disc">
+          <li class="font-black text-xl">null:</li>
+          <li>A developer must explicitly assign null to a variable.</li>
+          <li>Used to represent a deliberate "empty" or "no value" state.</li>
+          <li>Often signifies the absence of an expected object.</li>
+        </ul>
+        <ul class="italic text-base list-disc">
+          <li class="font-black text-xl">Example:</li>
+          <li>
+            <span class="font-medium underline">JavaScript</span><br />
+            let age; // age is 'undefined' <br />
+            function getUser(id) { <br />
+            if (userExists) { <br />
+            return user; <br />
+            } else { <br />
+            return null; // Indicates no user found <br />
+            &nbsp;&nbsp;} <br />
+            }
+          </li>
+        </ul>
+      </article>
+      <article class="space-y-4">
+        <h1 class="font-black text-2xl underline">What is a REST API?</h1>
+        <ul class="italic text-base list-disc">
+          <li class="font-black text-xl">
+            REST (Representational State Transfer):
+            <span class="font-normal text-base"
+              >An architectural style for designing web APIs.</span
+            >
+          </li>
+          <li class="font-black text-xl">
+            API (Application Programming Interface):
+            <span class="font-normal text-base"
+              >A set of rules that define how different pieces of software can
+              interact with each other.</span
+            >
+          </li>
+        </ul>
+        <ul class="italic text-base list-disc">
+          <li class="font-black text-xl">Key Principles of REST APIs:</li>
+          <li class="font-black text-lg">
+            Client-Server:
+            <span class="font-normal text-base"
+              >Separation of concerns (frontend client, backend server).</span
+            >
+          </li>
+          <li class="font-black text-lg">
+            Stateless:
+            <span class="font-normal text-base"
+              >The server doesn't maintain client state between requests.</span
+            >
+          </li>
+          <li class="font-black text-lg">
+            Uniform Interface:
+            <span class="font-normal text-base"
+              >Resources are identified by URLs, and standard HTTP methods (GET,
+              POST, PUT, DELETE) are used for manipulation.</span
+            >
+          </li>
+        </ul>
+        <ul class="italic text-base list-disc">
+          <li class="font-black text-xl">Why REST APIs Matter:</li>
+          <li class="font-black text-lg">
+            Scalability, Interoperability:
+            <span class="font-normal text-base"
+              >Widely used due to standardized communication patterns, making it
+              easy for different systems to interact.</span
+            >
+          </li>
+        </ul>
+        <ul class="italic text-base list-disc">
+          <li class="font-black text-xl">Example:</li>
+          <li class="font-black text-lg">
+            Getting user data with ID 123 from a REST API:
+          </li>
+          <li class="font-normal text-base">
+            HTTP Request: GET /api/users/123
+          </li>
+        </ul>
+      </article>
+      <hr class="mt-4" />
+    </main>
+    <footer>
+      <a
+        href="https://g.co/gemini/share/01d5d1e87886"
+        target="_blank"
+        class="underline text-[#9B72CA] text-center text-xl block"
+        >Powered By Gemini Advanced</a
+      >
+    </footer>
+  </body>
+</html>
