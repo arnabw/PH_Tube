@@ -7,18 +7,37 @@
     <link rel="icon" href="./play.png" type="png/icon" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="p-4 md:p-8 lg:p-12 text-balance">
+  <body class="px-4 md:px-8 lg:px-12 py-4 text-pretty">
     <header>
       <nav>
-        <section class="flex justify-between items-center">
+        <section
+          class="flex justify-between items-center py-4 border-b-2 border-[#17171733]"
+        >
           <img src="./Logo.png" alt="" />
-          <button>Sort by view</button>
-          <a href="./blog.html">Blog</a>
+          <button
+            class="py-[10px] px-5 bg-[#25252533] rounded-lg text-[#252525] text-lg font-medium"
+          >
+            Sort by view
+          </button>
+          <a
+            href="./blog.html"
+            class="py-[10px] px-5 bg-[#FF1F3D] rounded-lg text-white text-lg"
+            >Blog</a
+          >
         </section>
-        <section class="flex gap-4">
-          <button>All</button>
-        </section>
+        <section
+          id="allBtn"
+          class="flex gap-4 py-4 items-center flex-wrap justify-center"
+        ></section>
       </nav>
     </header>
+    <main>
+      <section
+        id="allData"
+        class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4"
+      ></section>
+    </main>
+
+    <script src="./app.js"></script>
   </body>
 </html>
