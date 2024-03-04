@@ -1,4 +1,5 @@
 // Button Functionality
+let sorted = false;
 const loadButtonData = async () => {
   const res = await fetch(
     "https://openapi.programming-hero.com/api/videos/categories"
@@ -28,6 +29,11 @@ function buttonInsert(btns) {
   });
 }
 
+function sortByView() {
+  sorted = true;
+  loadData();
+}
+
 //Showcase Functionality
 const loadData = async (id = 1000) => {
   const res = await fetch(
@@ -53,6 +59,13 @@ function dataInsert(allData) {
     </p>
   </div>
     `;
+  }
+  if (sorted) {
+    allData.sort((a, b) => {
+      const firstElement = a.others.views.replace("K", "");
+      const secondElement = b.others.views.replace("K", "");
+      return secondElement - firstElement;
+    });
   }
   allData.forEach((data) => {
     const article = document.createElement("article");
